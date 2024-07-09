@@ -21,7 +21,9 @@ def main():
     # loop across the data structure fog['imdata']
     for instance in fog['imdata']:
         # each time through the loop "get" the version and display it
+        print("Appliance ID - ", instance.get('firmwareCtrlrRunning').get('attributes').get('applId'))
         print("Firmware version running - ", instance.get('firmwareCtrlrRunning').get('attributes').get('version'))
+        print("------------------------------------")
 
 # best practice technique to call our python script
 if __name__ == "__main__":
